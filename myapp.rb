@@ -1,5 +1,6 @@
 require "sinatra"
-require "sinatra/reloader"
+require "sinatra/reloader" if development?
+
 
 get "/" do
   @contents = Dir.glob("*")
